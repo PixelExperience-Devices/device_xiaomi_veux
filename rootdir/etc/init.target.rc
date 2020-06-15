@@ -98,6 +98,14 @@ on late-fs
     start console
     mount_all --late
 
+on late-init
+    # Start services for bootanim
+    start surfaceflinger
+    start bootanim
+    start vendor.hwcomposer-2-3
+    start vendor.configstore-hal
+    start vendor.qti.hardware.display.allocator
+
 on post-fs-data
     mkdir /vendor/data/tombstones 0771 system system
 #ExtR HONGMI-90116,wufa@wingtech.com,add,20210908,add mi_thermal
