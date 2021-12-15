@@ -7,9 +7,6 @@
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/veux/veux-vendor.mk)
 
-# APEX's
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
 # GSI Keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
