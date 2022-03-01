@@ -31,5 +31,7 @@ write_headers
 
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
+    echo "TARGET_RECOVERY_DEVICE_DIRS += vendor/$VENDOR/$DEVICE/proprietary" >> "$BOARDMK"
+
 # Finish
 write_footers
