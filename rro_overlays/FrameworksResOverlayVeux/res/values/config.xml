@@ -808,4 +808,7 @@
         <item>restart_fastboot</item>
      </string-array>
 
+    <!-- Enable video pause workaround when enabling/disabling the camera. -->
+    <bool name="config_useVideoPauseWorkaround">true</bool>
+
 </resources>
