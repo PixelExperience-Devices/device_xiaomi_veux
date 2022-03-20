@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <device name="Android">
-    <item name="ambient.on">0.1</item>
-    <item name="screen.on">100.2</item>
-    <item name="screen.full">208</item>
+    <item name="ambient.on.display0">0.1</item>
+    <item name="screen.on.display0">100.2</item>
+    <item name="screen.full.display0">208</item>
     <item name="bluetooth.active">9</item>
     <item name="bluetooth.on">0.47</item>
     <item name="wifi.on">0.32</item>
@@ -18,9 +18,6 @@
     <array name="radio.on">
         <value>2.82</value>
         <value>1.82</value>
-    </array>
-    <array name="cpu.active">
-        <value>0.1</value>
     </array>
     <array name="cpu.clusters.cores">
         <value>6</value>
@@ -102,7 +99,7 @@
         <value>401</value>
         <value>506</value>
     </array>
-    <item name="modem.controller.voltage">800</item>
+    <item name="modem.controller.voltage">0</item>
     <array name="gps.signalqualitybased">
         <value>0</value>
         <value>0</value>
