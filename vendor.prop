@@ -144,8 +144,8 @@ ro.bluetooth.a2dp_offload.supported=true
 # Camera
 camera.disable_zsl_mode=true
 
-# Chipset
-ro.soc.manufacturer=Qualcomm
+# SoC
+ro.soc.manufacturer=QTI
 ro.soc.model=SM6375
 
 # Crypto
