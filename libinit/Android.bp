@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2021 The LineageOS Project
+// Copyright (C) 2022 The LineageOS Project
 //
 // SPDX-License-Identifier: Apache-2.0
 //
@@ -7,7 +7,27 @@
 cc_library_static {
     name: "init_xiaomi_veux",
     srcs: ["init_xiaomi_veux.cpp"],
-    whole_static_libs: ["//device/xiaomi/sm6375-common:libinit_xiaomi_holi"],
+    whole_static_libs: ["//device/xiaomi/veux:libinit_xiaomi_holi"],
+    include_dirs: ["system/core/init"],
+    recovery_available: true,
+}
+
+cc_library_static {
+    name: "libinit_xiaomi_holi",
+    srcs: [
+        "libinit_dalvik_heap.cpp",
+        "libinit_variant.cpp",
+        "libinit_utils.cpp",
+    ],
+    whole_static_libs: ["libbase"],
+    export_include_dirs: ["include"],
+    recovery_available: true,
+}
+
+cc_library_static {
+    name: "init_xiaomi_holi",
+    srcs: ["init_xiaomi_holi.cpp"],
+    whole_static_libs: ["libinit_xiaomi_holi"],
     include_dirs: ["system/core/init"],
     recovery_available: true,
 }
