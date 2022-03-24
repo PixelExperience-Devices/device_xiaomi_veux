@@ -18,7 +18,7 @@ static const variant_info_t veux_global_info = {
     .marketname = "Redmi Note 11 Pro 5G",
     .model = "2201116SG",
     .name = "veux_global",
-    .build_fingerprint = "Redmi/veux_global/veux:12/SKQ1.211006.001/V13.0.2.0.SKCMIXM:user/release-keys",
+    .build_fingerprint = "Redmi/veux_global/veux:12/SKQ1.211006.001/V13.0.4.0.SKCMIXM:user/release-keys",
 
     .nfc = true,
 };
@@ -84,7 +84,7 @@ static const variant_info_t veux_p_global_info = {
     .marketname = "POCO X4 Pro 5G",
     .model = "2201116PG",
     .name = "veux_p_global",
-    .build_fingerprint = "POCO/veux_p_global/veux:12/SKQ1.211006.001/V13.0.2.0.SKCMIXM:user/release-keys",
+    .build_fingerprint = "POCO/veux_p_global/veux:12/SKQ1.211006.001/V13.0.4.0.SKCMIXM:user/release-keys",
 
     .nfc = true,
 };
