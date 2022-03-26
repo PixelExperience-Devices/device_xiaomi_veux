@@ -1,6 +1,10 @@
 # Battery
 genfscon sysfs /devices/platform/soc/soc:qcom_wt_chg/power_supply			u:object_r:vendor_sysfs_battery_supply:s0
 
+# Extcon sysfs
+genfscon sysfs /devices/platform/soc/1628000.qcom,msm-eud/extcon     u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/soc/soc:rt-pd-manager/extcon     u:object_r:sysfs_extcon:s0
+
 # Fingerprint
 genfscon sysfs /devices/platform/soc/soc:fpc1020					u:object_r:vendor_sysfs_fingerprint:s0
 genfscon sysfs /devices/platform/soc/soc:goodix_fp					u:object_r:vendor_sysfs_fingerprint:s0
