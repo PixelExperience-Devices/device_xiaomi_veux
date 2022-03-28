@@ -2,3 +2,5 @@ allow init adsprpcd_file:file mounton;
 
 # Allow init to set read_ahead_kb and discard_max_bytes on /data partition
 allow init vendor_sysfs_scsi_host:file w_file_perms;
+
+allow init debugfs_tracing_debug:dir mounton;
