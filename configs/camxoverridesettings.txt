@@ -1,6 +1,4 @@
 MultiCameraEnable=TRUE
-logInfoMask=0x10080
-overrideLogLevels=0x1F
 enable3ADebugData=FALSE
 enableMCTF=TRUE
 vsquality=6@30|5@30
