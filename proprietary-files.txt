@@ -464,7 +464,6 @@ vendor/etc/camera/model/pre_model/ldc_pre_policy
 vendor/etc/camera/model/rt_model/preview_cache
 vendor/etc/camera/model/rt_model/preview_model
 vendor/etc/camera/model/rt_model/preview_policy
-vendor/etc/camera/camxoverridesettings.txt
 vendor/etc/camera/dof_mecp.bin
 vendor/etc/camera/intsense_config_undistort.bin
 vendor/etc/camera/morpho_lowlight_2.0_India_aac_gc02m1_macro_ii.xml
