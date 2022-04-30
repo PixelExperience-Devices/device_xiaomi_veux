@@ -201,6 +201,19 @@
         <fqname>@1.0::IFactoryInterface/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.goodix.hardware.biometrics.fingerprint</name>
+        <transport>hwbinder</transport>
+        <version>2.1</version>
+        <interface>
+            <name>IGoodixFingerprintDaemon</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IGoodixFingerprintDaemonExt</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
         <version>2.2</version>
@@ -657,5 +670,14 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IQspmhal/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.silead.hardware.fingerprintext</name>
+        <transport>hwbinder</transport>
+         <version>1.0</version>
+        <interface>
+            <name>ISileadFingerprint</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 </manifest>

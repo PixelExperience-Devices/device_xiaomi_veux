@@ -1,11 +1,10 @@
-service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.3-service.xiaomi_holi
-    # "class hal" causes a race condition on some devices due to files created
-    # in /data. As a workaround, postpone startup until later in boot once
-    # /data is mounted.
-    class late_start
-    user system
-    group system input uhid
+#
+# Copyright (C) 2021 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
 
+# Fingerprint
 on boot
     #for silead fingeprint
     mkdir /data/vendor/silead 0777 system system
@@ -34,3 +33,13 @@ on boot
     chmod 0644  /sys/bus/platform/devices/soc:fpc1020/regulator_enable
     chmod 0644  /sys/bus/platform/devices/soc:fpc1020/compatible_all
     chmod 0644 /sys/bus/platform/devices/soc:fpc1020/fingerdown_wait
+
+service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
+    override
+    class hal
+    user nfc
+    group nfc
+    disabled
+
+on boot && property:ro.boot.product.hardware.sku=nfc
+    enable vendor.nfc_hal_service
