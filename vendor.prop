@@ -43,7 +43,6 @@ vendor.audio_hal.period_multiplier=3
 vendor.audio.adm.buffering.ms=2
 vendor.audio.volume.headset.gain.depcal=true
 persist.audio.fluence.voicecomm=true
-debug.stagefright.omx_default_rank=0
 ro.vendor.audio.ring.filter=true
 persist.vendor.audio.ring.filter.mask=0
 vendor.audio.hal.output.suspend.supported=true
@@ -230,6 +229,10 @@ vendor.display.qdcm.mode_combine=2
 vendor.display.use_layer_ext=0
 vendor.display.use_smooth_motion=0
 vendor.gralloc.disable_ubwc=0
+
+# Media
+debug.stagefright.ccodec=4
+debug.stagefright.omx_default_rank=0
 
 # NFC
 ro.vendor.se.type=HCE,UICC
