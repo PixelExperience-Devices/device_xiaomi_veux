@@ -295,14 +295,14 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlayVayu \
-    DialerOverlayVayu \
-    FrameworksResOverlayVayu \
-    SettingsOverlayVayu \
-    SettingsProviderOverlayVayu \
-    SystemUIOverlayVayu \
-    TelephonyOverlayVayu \
-    WifiOverlayVayu
+    CarrierConfigOverlayVeux \
+    DialerOverlayVeux \
+    FrameworksResOverlayVeux \
+    SettingsOverlayVeux \
+    SettingsProviderOverlayVeux \
+    SystemUIOverlayVeux \
+    TelephonyOverlayVeux \
+    WifiOverlayVeux
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
