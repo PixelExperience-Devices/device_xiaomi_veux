@@ -7,8 +7,8 @@ audio.sys.routing.latency=0
 
 # Display
 ro.surface_flinger.set_display_power_timer_ms=1000
-ro.surface_flinger.set_idle_timer_ms=500
-ro.surface_flinger.set_touch_timer_ms=800
+ro.surface_flinger.set_idle_timer_ms=3000
+ro.surface_flinger.set_touch_timer_ms=3000
 
 # Transcoding related property.
 debug.media.transcoding.codec_max_operating_rate_720P=240
