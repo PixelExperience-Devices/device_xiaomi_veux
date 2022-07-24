@@ -49,7 +49,15 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
-# Initialize the helper for common device
+function blob_fixup() {
+    case "${1}" in
+        vendor/lib64/camera/components/com.qti.node.mialgocontrol.so)
+            llvm-strip --strip-debug  "${2}"
+            ;;
+    esac
+}
+
+# Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
 
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
