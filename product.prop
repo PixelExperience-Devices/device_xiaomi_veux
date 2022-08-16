@@ -5,6 +5,11 @@ audio.sys.noisy.broadcast.delay=500
 audio.sys.offload.pstimeout.secs=3
 audio.sys.routing.latency=0
 
+# Blurs
+persist.sys.sf.disable_blurs=1
+ro.sf.blurs_are_expensive=1
+ro.surface_flinger.supports_background_blur=1
+
 # Display
 ro.surface_flinger.set_display_power_timer_ms=1000
 ro.surface_flinger.set_idle_timer_ms=3000
