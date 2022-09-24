@@ -50,6 +50,10 @@ ro.vendor.qti.sys.fw.bservice_enable=true
 DEVICE_PROVISIONED=1
 ril.subscription.types=NV,RUIM
 
+# Radio Video Calling
+persist.vendor.radio.vdp_on_ims_cap=1
+persist.vendor.qti.telephony.vt_cam_interface=2
+
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
 
