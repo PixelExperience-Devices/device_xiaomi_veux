@@ -82,4 +82,7 @@
         <item>0</item>
     </integer-array>
 
+    <!-- Preferred max refresh rate at AOD & Ambient Display, if supported by the display. -->
+    <integer name="config_aodMaxRefreshRate">60</integer>
+
 </resources>
