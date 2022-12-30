@@ -6,12 +6,11 @@
 
 #include <android-base/logging.h>
 #include <android-base/properties.h>
-#include <libinit_utils.h>
 
+#include <libinit_utils.h>
 #include <libinit_variant.h>
 
 using android::base::GetProperty;
-
 
 #define HWC_PROP "ro.boot.hwc"
 #define MODEL_PROP "ro.boot.board_id"

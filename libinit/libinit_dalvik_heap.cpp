@@ -5,8 +5,8 @@
  */
 
 #include <sys/sysinfo.h>
-#include <libinit_utils.h>
 
+#include <libinit_utils.h>
 #include <libinit_dalvik_heap.h>
 
 #define HEAPSTARTSIZE_PROP "dalvik.vm.heapstartsize"
