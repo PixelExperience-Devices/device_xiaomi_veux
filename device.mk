@@ -303,6 +303,12 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayVeux \
     SettingsOverlayVeux \
     SettingsProviderOverlayVeux \
+    SettingsProviderOverlayS88006AA1 \
+    SettingsProviderOverlayS88007AA1 \
+    SettingsProviderOverlayS88007EA1 \
+    SettingsProviderOverlayS88008BA1 \
+    SettingsProviderOverlayS88106BA1 \
+    SettingsProviderOverlayS88107BA1 \
     SystemUIOverlayVeux \
     TelephonyOverlayVeux \
     WifiOverlayVeux
