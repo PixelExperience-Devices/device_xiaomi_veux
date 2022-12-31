@@ -311,7 +311,13 @@ PRODUCT_PACKAGES += \
     SettingsProviderOverlayS88107BA1 \
     SystemUIOverlayVeux \
     TelephonyOverlayVeux \
-    WifiOverlayVeux
+    WifiOverlayVeux \
+    WifiOverlayS88006AA1 \
+    WifiOverlayS88007AA1 \
+    WifiOverlayS88007EA1 \
+    WifiOverlayS88008BA1 \
+    WifiOverlayS88106BA1 \
+    WifiOverlayS88107BA1
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
