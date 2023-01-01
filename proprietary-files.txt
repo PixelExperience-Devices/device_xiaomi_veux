@@ -68,7 +68,13 @@ vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libaudcal.so
 
-# ADSP Modules
+# ADSP
+vendor/bin/adsprpcd
+vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
+vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libadsprpc.so
+
+# ADSP modules
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so
 vendor/lib/rfsa/adsp/capi_v2_dap_cpdp.so
@@ -94,7 +100,7 @@ vendor/lib/rfsa/adsp/misound_res.bin
 vendor/lib/rfsa/adsp/misound_res_headphone.bin
 vendor/lib/rfsa/adsp/misound_res_spk.bin
 
-# Audio Configs
+# Audio configs
 vendor/etc/audio/sku_holi/a2dp_audio_policy_configuration.xml
 vendor/etc/audio/sku_holi/audio_effects.conf
 vendor/etc/audio/sku_holi/audio_effects.xml
@@ -136,15 +142,13 @@ vendor/etc/spk_cal_pinknoise.wav
 vendor/etc/spk_cal_silence.wav
 vendor/etc/usb_audio_policy_configuration.xml
 
-# ADSP
-vendor/bin/adsprpcd
-vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
-vendor/lib64/libadsp_default_listener.so
-vendor/lib64/libadsprpc.so
-
-# Audio Effects
+# Audio FX modules
+system_ext/etc/permissions/audiosphere.xml
+system_ext/framework/audiosphere.jar
+vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libhwdap.so
 vendor/lib/soundfx/libmisoundfx.so
+vendor/lib/soundfx/libshoebox.so
 vendor/lib/soundfx/libswdap.so
 vendor/lib/soundfx/libswgamedap.so
 vendor/lib64/soundfx/libhwdap.so
@@ -152,13 +156,7 @@ vendor/lib64/soundfx/libmisoundfx.so
 vendor/lib64/soundfx/libswdap.so
 vendor/lib64/soundfx/libswgamedap.so
 
-# Audio FX modules
-system_ext/etc/permissions/audiosphere.xml
-system_ext/framework/audiosphere.jar
-vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libshoebox.so
-
-# Audio Hardware
+# Audio hardware
 vendor/lib/hw/audio.primary.holi.so
 vendor/lib/liba2dpoffload.so
 vendor/lib/libadm.so
@@ -179,7 +177,6 @@ vendor/lib64/libbtnv.so
 vendor/lib64/libsoc_helper.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
-vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Bluetooth (A2DP)
 vendor/lib/hw/audio.bluetooth_qti.default.so
@@ -315,16 +312,12 @@ vendor/lib64/libalCFR.so
 vendor/lib64/libalLDC.so
 vendor/lib64/libalhLDC.so
 vendor/lib64/libanc_dc_base.so
-vendor/lib64/libarcsoft_hdr_detection.so
-vendor/lib64/libarcsoft_high_dynamic_range.so
-vendor/lib64/libarcsoft_low_light_hdr.so
 vendor/lib64/libbitmlengine.so
 vendor/lib64/libbitmlenginev2.so
 vendor/lib64/libc++_shared.so
 vendor/lib64/libcamera_nn_stub.so
 vendor/lib64/libcamera_scene.so
 vendor/lib64/libcamerapostproc.so
-vendor/lib64/libcamxswispiqmodule.so
 vendor/lib64/libcapiv2svacnn.so
 vendor/lib64/libcapiv2svarnn.so
 vendor/lib64/libcapiv2vop.so
@@ -339,9 +332,6 @@ vendor/lib64/libmctfengine_stub.so
 vendor/lib64/libmialgoengine.so
 vendor/lib64/libmibokeh_712.so
 vendor/lib64/libmm-color-convertor.so
-vendor/lib64/libmmcamera_cac3.so
-vendor/lib64/libmmcamera_mfnr_t4.so
-vendor/lib64/libmmcamera_pdpc.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libofflinedump.so
 vendor/lib64/libofflinelog.so
@@ -374,6 +364,9 @@ vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 # Camera arcsoft
 vendor/lib64/libarcsoft_beautyshot.so
 vendor/lib64/libarcsoft_dualcam_refocus_image.so
+vendor/lib64/libarcsoft_hdr_detection.so
+vendor/lib64/libarcsoft_high_dynamic_range.so
+vendor/lib64/libarcsoft_low_light_hdr.so
 vendor/lib64/libarcsoft_portrait_lighting.so
 vendor/lib64/libarcsoft_portrait_lighting_c.so
 vendor/lib64/libarcsoft_super_night_raw.so
@@ -388,6 +381,7 @@ vendor/lib64/libcamxifestriping.so
 vendor/lib64/libcamximageformatutils.so
 vendor/lib64/libcamxqsatalgo.so
 vendor/lib64/libcamxstatscore.so
+vendor/lib64/libcamxswispiqmodule.so
 vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
 
@@ -513,10 +507,13 @@ vendor/etc/camera/vidhance_kernel1.bin
 vendor/etc/camera/vidhance_kernel2.bin
 
 # Camera sensors
+vendor/lib64/libmmcamera_cac3.so
 vendor/lib64/libmmcamera_faceproc.so
 vendor/lib64/libmmcamera_faceproc2.so
 vendor/lib64/libmmcamera_lscv35.so
 vendor/lib64/libmmcamera_mfnr.so
+vendor/lib64/libmmcamera_mfnr_t4.so
+vendor/lib64/libmmcamera_pdpc.so
 
 # Charger (Mi Turbo Charge)
 vendor/bin/batterysecret
@@ -754,7 +751,7 @@ vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
-# Embedded Secure Element power manager
+# ESE power manager
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 
 # Fingerprint
@@ -777,6 +774,14 @@ vendor/lib64/vendor.silead.hardware.fingerprintext@1.0.so
 
 # Firmware
 vendor/firmware/fs1958.fsm
+
+# FM
+vendor/lib64/vendor.qti.hardware.fm@1.0.so
+
+# Gatekeeper
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
+vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
 # Graphics
 vendor/lib/egl/eglSubDriverAndroid.so
@@ -826,11 +831,6 @@ vendor/firmware/a660_zap.b02
 vendor/firmware/a660_zap.elf
 vendor/firmware/a660_zap.mdt
 
-# Gatekeeper
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
-vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
-
 # GNSS
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
@@ -862,7 +862,6 @@ vendor/lib64/vendor.qti.gnss@2.1.so
 vendor/lib64/vendor.qti.gnss@3.0.so
 vendor/lib64/vendor.qti.gnss@4.0-service.so
 vendor/lib64/vendor.qti.gnss@4.0.so
-vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 
 # HotwordEnrollment
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
@@ -957,6 +956,52 @@ vendor/lib/libgcs.so
 vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
 
+# Media
+system_ext/lib/libmmosal.so
+system_ext/lib/libmmparser_lite.so
+system_ext/lib64/libmmosal.so
+system_ext/lib64/libmmparser_lite.so
+vendor/bin/hw/vendor.qti.media.c2@1.0-service
+vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
+vendor/etc/media_blair/video_system_specs.json
+vendor/etc/media_holi/video_system_specs.json
+vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
+vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
+-vendor/etc/vintf/manifest/c2_manifest_vendor.xml
+vendor/etc/video_system_specs.json
+vendor/lib/libmmosal.so
+vendor/lib/libqcodec2_base.so
+vendor/lib/libqcodec2_basecodec.so
+vendor/lib/libqcodec2_core.so
+vendor/lib/libqcodec2_hooks.so
+vendor/lib/libqcodec2_platform.so
+vendor/lib/libqcodec2_utils.so
+vendor/lib/libqcodec2_v4l2codec.so
+vendor/lib64/libmmosal.so
+
+# Media configs
+vendor/etc/media_codecs.xml
+vendor/etc/media_codecs_blair.xml
+vendor/etc/media_codecs_dolby_audio.xml
+vendor/etc/media_codecs_google_audio.xml
+vendor/etc/media_codecs_google_c2.xml
+vendor/etc/media_codecs_google_c2_audio.xml
+vendor/etc/media_codecs_google_c2_video.xml
+vendor/etc/media_codecs_google_telephony.xml
+vendor/etc/media_codecs_google_video.xml
+vendor/etc/media_codecs_google_video_le.xml
+vendor/etc/media_codecs_holi.xml
+vendor/etc/media_codecs_kona.xml
+vendor/etc/media_codecs_performance.xml
+vendor/etc/media_codecs_performance_blair.xml
+vendor/etc/media_codecs_performance_holi.xml
+vendor/etc/media_codecs_vendor_audio.xml
+vendor/etc/media_profiles.xml
+vendor/etc/media_profiles_V1_0.xml
+vendor/etc/media_profiles_blair.xml
+vendor/etc/media_profiles_holi.xml
+vendor/etc/media_profiles_vendor.xml
+
 # Media (VPU firmware)
 vendor/firmware/vpu20_1v.b01
 vendor/firmware/vpu20_1v.b02
@@ -1024,52 +1069,6 @@ vendor/firmware/vpu20_4v.b19
 vendor/firmware/vpu20_4v.mbn
 vendor/firmware/vpu20_4v.mdt
 vendor/firmware/vpu20_4v_unsigned.mbn
-
-# Media
-system_ext/lib/libmmosal.so
-system_ext/lib/libmmparser_lite.so
-system_ext/lib64/libmmosal.so
-system_ext/lib64/libmmparser_lite.so
-vendor/bin/hw/vendor.qti.media.c2@1.0-service
-vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
-vendor/etc/media_blair/video_system_specs.json
-vendor/etc/media_holi/video_system_specs.json
-vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
-vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
--vendor/etc/vintf/manifest/c2_manifest_vendor.xml
-vendor/etc/video_system_specs.json
-vendor/lib/libmmosal.so
-vendor/lib/libqcodec2_base.so
-vendor/lib/libqcodec2_basecodec.so
-vendor/lib/libqcodec2_core.so
-vendor/lib/libqcodec2_hooks.so
-vendor/lib/libqcodec2_platform.so
-vendor/lib/libqcodec2_utils.so
-vendor/lib/libqcodec2_v4l2codec.so
-vendor/lib64/libmmosal.so
-
-# Media Configs
-vendor/etc/media_codecs.xml
-vendor/etc/media_codecs_blair.xml
-vendor/etc/media_codecs_dolby_audio.xml
-vendor/etc/media_codecs_google_audio.xml
-vendor/etc/media_codecs_google_c2.xml
-vendor/etc/media_codecs_google_c2_audio.xml
-vendor/etc/media_codecs_google_c2_video.xml
-vendor/etc/media_codecs_google_telephony.xml
-vendor/etc/media_codecs_google_video.xml
-vendor/etc/media_codecs_google_video_le.xml
-vendor/etc/media_codecs_holi.xml
-vendor/etc/media_codecs_kona.xml
-vendor/etc/media_codecs_performance.xml
-vendor/etc/media_codecs_performance_blair.xml
-vendor/etc/media_codecs_performance_holi.xml
-vendor/etc/media_codecs_vendor_audio.xml
-vendor/etc/media_profiles.xml
-vendor/etc/media_profiles_V1_0.xml
-vendor/etc/media_profiles_blair.xml
-vendor/etc/media_profiles_holi.xml
-vendor/etc/media_profiles_vendor.xml
 
 # Mlipay
 vendor/bin/mlipayd@1.1
@@ -1148,6 +1147,12 @@ vendor/lib64/libOmxMpeghEncSw.so
 vendor/lib64/libOmxQcelp13Dec.so
 vendor/lib64/libOmxWmaDec.so
 
+# Pasrmanager
+vendor/lib/vendor.qti.memory.pasrmanager@1.0.so
+vendor/lib/vendor.qti.memory.pasrmanager@1.1.so
+vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
+vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so
+
 # Perf
 vendor/bin/hw/vendor.qti.hardware.perf@2.2-service
 vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc
@@ -1163,8 +1168,6 @@ vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-perfd.so
 vendor/lib/libqti-util.so
 vendor/lib/libqti-utils.so
-vendor/lib/vendor.qti.memory.pasrmanager@1.0.so
-vendor/lib/vendor.qti.memory.pasrmanager@1.1.so
 vendor/lib64/liblearningmodule.so
 vendor/lib64/libmeters.so
 vendor/lib64/libperfconfig.so
@@ -1174,8 +1177,6 @@ vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 vendor/lib64/libqti-utils.so
-vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
-vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so
 
 # Peripheral manager
 vendor/bin/pm-proxy
@@ -1189,6 +1190,9 @@ vendor/bin/power_off_alarm
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
+
+# QCC
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 
 # QCV
 vendor/bin/init.qti.qcv.sh
@@ -1371,17 +1375,31 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 
+# SCVE
+vendor/lib/libscveCommon.so
+vendor/lib/libscveCommon_stub.so
+vendor/lib/libscveObjectSegmentation.so
+vendor/lib/libscveObjectSegmentation_stub.so
+vendor/lib/libscveObjectTracker.so
+vendor/lib/libscveObjectTracker_stub.so
+vendor/lib64/libscveCommon.so
+vendor/lib64/libscveCommon_stub.so
+vendor/lib64/libscveObjectSegmentation.so
+vendor/lib64/libscveObjectSegmentation_stub.so
+vendor/lib64/libscveObjectTracker.so
+vendor/lib64/libscveObjectTracker_stub.so
+
+# Secure element
+vendor/bin/hw/android.hardware.secure_element@1.2-service
+vendor/etc/init/android.hardware.secure_element@1.2-service.rc
+
 # Sensors
-vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
 vendor/etc/init/init.vendor.sensors.rc
-vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
 vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
-vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
-vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib64/libnotifyaudiohal.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
@@ -1389,9 +1407,15 @@ vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/sensors.elliptic.so
 vendor/lib64/sensors.ssc.so
+
+# Sensors calibrate
+vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
+vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
+vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
+vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
-# Sensors Configs
+# Sensors configs
 vendor/etc/sensors/config/holi_default_sensors.json
 vendor/etc/sensors/config/holi_dynamic_sensors.json
 vendor/etc/sensors/config/holi_power_0.json
@@ -1445,24 +1469,6 @@ vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
 vendor/etc/elliptic_sensor.xml
 
-# Secure element
-vendor/bin/hw/android.hardware.secure_element@1.2-service
-vendor/etc/init/android.hardware.secure_element@1.2-service.rc
-
-# Snapdragon Computer Vision Engine
-vendor/lib/libscveCommon.so
-vendor/lib/libscveCommon_stub.so
-vendor/lib/libscveObjectSegmentation.so
-vendor/lib/libscveObjectSegmentation_stub.so
-vendor/lib/libscveObjectTracker.so
-vendor/lib/libscveObjectTracker_stub.so
-vendor/lib64/libscveCommon.so
-vendor/lib64/libscveCommon_stub.so
-vendor/lib64/libscveObjectSegmentation.so
-vendor/lib64/libscveObjectSegmentation_stub.so
-vendor/lib64/libscveObjectTracker.so
-vendor/lib64/libscveObjectTracker_stub.so
-
 # Soter
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
@@ -1472,23 +1478,23 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 # Soter service (Tencent)
 -vendor/app/SoterService/SoterService.apk
 
-# Time services
+# Time service
 -vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
 # Touchscreen firmware
-vendor/firmware/goodix_cfg_group.bin
-vendor/firmware/goodix_firmware.bin
 vendor/firmware/goodix_cfg_group.bin:recovery/root/vendor/firmware/goodix_cfg_group.bin
 vendor/firmware/goodix_firmware.bin:recovery/root/vendor/firmware/goodix_firmware.bin
+vendor/firmware/goodix_cfg_group.bin
+vendor/firmware/goodix_firmware.bin
 
 # Thermal
 vendor/bin/mi_thermald
 vendor/lib64/libthermalclient.so
 
-# Thermal Config
+# Thermal configs
 vendor/etc/thermal-camera.conf
 vendor/etc/thermal-class0.conf
 vendor/etc/thermal-engine.conf

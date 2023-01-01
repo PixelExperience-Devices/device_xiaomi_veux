@@ -33,21 +33,27 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
-# Audio
+# ANT+
 PRODUCT_PACKAGES += \
-    libvolumelistener \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libqcompostprocbundle
+    com.dsi.ant@1.0.vendor
 
+# Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
     android.hardware.audio@6.0-impl \
+
+PRODUCT_PACKAGES += \
     audioadsprpcd \
     audio.primary.holi \
     audio.r_submix.default \
-    audio.usb.default \
+    audio.usb.default
+
+PRODUCT_PACKAGES += \
+    libvolumelistener \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libqcompostprocbundle \
     libaudiopreprocessing \
     libbatterylistener \
     libbundlewrapper \
@@ -83,7 +89,6 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth.audio@2.1-impl \
-    com.dsi.ant@1.0.vendor \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
@@ -110,18 +115,20 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
-    GoogleCameraGo \
-    libcamera2ndk_vendor \
-    libstdc++.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
+
+PRODUCT_PACKAGES += \
+    libcamera2ndk_vendor \
+    libstdc++.vendor \
+    libpiex_shim
+
+PRODUCT_PACKAGES += \
+    GoogleCameraGo
 
 # Camx overrides
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt
-
-PRODUCT_PACKAGES += \
-    libpiex_shim
 
 # Component overrides
 PRODUCT_COPY_FILES += \
@@ -138,10 +145,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Dex
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
-
-# DeviceSettings
-PRODUCT_PACKAGES += \
-    XiaomiParts
 
 # Display
 PRODUCT_PACKAGES += \
@@ -195,7 +198,9 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-impl-qti \
-    android.hardware.gnss@2.1-service-qti
+    android.hardware.gnss@2.1-service-qti \
+    android.hardware.gnss@1.1.vendor \
+    android.hardware.gnss@2.1.vendor
 
 PRODUCT_PACKAGES += \
     libbatching \
@@ -218,11 +223,6 @@ PRODUCT_PACKAGES += \
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
-
-# GPS
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.1.vendor \
-    android.hardware.gnss@2.1.vendor
 
 # Health
 PRODUCT_PACKAGES += \
@@ -278,10 +278,10 @@ PRODUCT_PACKAGES += \
 
 # Net
 PRODUCT_PACKAGES += \
-    netutils-wrapper-1.0
+    android.system.net.netd@1.1.vendor
 
 PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor
+    netutils-wrapper-1.0
 
 # Neural Networks
 PRODUCT_PACKAGES += \
@@ -322,6 +322,17 @@ PRODUCT_PACKAGES += \
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Parts
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
+# Perf
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.perf@2.2.vendor
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -379,13 +390,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_nfc/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_nfc/com.nxp.mifare.xml
 
-# Perf
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.perf@2.2.vendor
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
@@ -421,41 +425,43 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    libjson \
-    librmnetctl
-
-PRODUCT_PACKAGES += \
     android.hardware.radio@1.6.vendor \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2.vendor
 
-# Rootdir
 PRODUCT_PACKAGES += \
-    init.batterysecret.rc \
+    libjson \
+    librmnetctl
+
+# Ramdisk
+PRODUCT_PACKAGES += \
     init.class_main.sh \
-    init.mi.btmac.sh \
     init.kernel.post_boot.sh \
     init.kernel.post_boot-blair.sh \
     init.kernel.post_boot-holi.sh \
     init.qcom.sh \
     init.qcom.post_boot.sh \
-    init.nfc.rc \
+    init.mi.btmac.sh \
+    vendor_modprobe.sh
+
+PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qti.kernel.rc \
     init.qti.ufs.rc \
+    init.nfc.rc \
     init.target.rc \
-    ueventd.qcom.rc \
-    vendor_modprobe.sh
+    init.batterysecret.rc \
+    ueventd.qcom.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/charger_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fstab.qti \
     $(LOCAL_PATH)/rootdir/etc/fstab.default:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.default \
-    $(LOCAL_PATH)/rootdir/etc/fstab.default:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.default \
     $(LOCAL_PATH)/rootdir/etc/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default \
+    $(LOCAL_PATH)/rootdir/etc/fstab.default:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.default \
     $(LOCAL_PATH)/rootdir/etc/fstab.emmc:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.emmc \
-    $(LOCAL_PATH)/rootdir/etc/fstab.emmc:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.emmc \
     $(LOCAL_PATH)/rootdir/etc/fstab.emmc:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.emmc \
+    $(LOCAL_PATH)/rootdir/etc/fstab.emmc:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.emmc \
     $(LOCAL_PATH)/rootdir/etc/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
 
 # Sensors
@@ -524,12 +530,12 @@ PRODUCT_COPY_FILES += \
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
+    vendor.qti.hardware.wifi.hostapd@1.2.vendor \
+    vendor.qti.hardware.wifi.supplicant@2.1.vendor \
     hostapd \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
     libwpa_client \
-    vendor.qti.hardware.wifi.hostapd@1.2.vendor \
-    vendor.qti.hardware.wifi.supplicant@2.1.vendor \
     wpa_cli \
     wpa_supplicant \
     wpa_supplicant.conf
