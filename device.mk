@@ -203,6 +203,8 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1.vendor
 
 PRODUCT_PACKAGES += \
+    liblocation_api \
+    libgps.utils \
     libbatching \
     libgeofencing \
     libgnss
@@ -431,7 +433,6 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor
 
 PRODUCT_PACKAGES += \
-    libjson \
     librmnetctl
 
 # Ramdisk
