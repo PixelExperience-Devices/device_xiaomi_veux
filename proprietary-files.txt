@@ -1836,8 +1836,6 @@ vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
 # Touchscreen firmware
-vendor/firmware/goodix_cfg_group.bin:recovery/root/vendor/firmware/goodix_cfg_group.bin
-vendor/firmware/goodix_firmware.bin:recovery/root/vendor/firmware/goodix_firmware.bin
 vendor/firmware/goodix_cfg_group.bin
 vendor/firmware/goodix_firmware.bin
 
