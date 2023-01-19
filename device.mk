@@ -438,14 +438,12 @@ PRODUCT_PACKAGES += \
     init.kernel.post_boot-blair.sh \
     init.kernel.post_boot-holi.sh \
     init.qcom.sh \
-    init.qcom.usb.sh \
     init.qcom.post_boot.sh \
     init.mi.btmac.sh \
     vendor_modprobe.sh
 
 PRODUCT_PACKAGES += \
     init.qcom.rc \
-    init.qcom.usb.rc \
     init.qti.kernel.rc \
     init.qti.ufs.rc \
     init.nfc.rc \
@@ -511,6 +509,13 @@ PRODUCT_PACKAGES_DEBUG += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.3-service-qti
+
+PRODUCT_PACKAGES += \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh
+
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/usb/etc
 
 # Vibrator
 PRODUCT_PACKAGES += \
