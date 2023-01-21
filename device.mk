@@ -116,9 +116,6 @@ PRODUCT_PACKAGES += \
     libstdc++.vendor \
     libpiex_shim
 
-PRODUCT_PACKAGES += \
-    GoogleCameraGo
-
 # Camx overrides
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt
