@@ -193,7 +193,7 @@ on charger
     #+ExtR HONGMI-90116,wufa@wingtech.com,add,20210908,add mi_thermal
     start mi_thermald
     #-ExtR HONGMI-90116,wufa@wingtech.com,add,20210908,add mi_thermal
- 
+
 #+ExtR HONGMI-90162,zhangb02@wingtech.com,add,20211003,add misound
 service audioshell_service /vendor/bin/audioshell_service
     oneshot

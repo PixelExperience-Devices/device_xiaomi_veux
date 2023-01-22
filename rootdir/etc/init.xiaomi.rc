@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2022 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -34,6 +34,7 @@ on boot
     chmod 0644  /sys/bus/platform/devices/soc:fpc1020/compatible_all
     chmod 0644 /sys/bus/platform/devices/soc:fpc1020/fingerdown_wait
 
+# NFC
 service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
     override
     class hal
