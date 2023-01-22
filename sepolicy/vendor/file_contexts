@@ -1,71 +1,67 @@
-  # Audio
-/dev/socket/audio_hw_socket								u:object_r:audio_socket:s0
-/dev/elliptic(.*)?									u:object_r:sound_device:s0
-/mnt/vendor/persist/audio/cali_test.bin							u:object_r:vendor_persist_audio_file:s0
-/mnt/vendor/persist/audio/fsm_calib.bin							u:object_r:vendor_persist_audio_file:s0
-/mnt/vendor/persist/audio/aw_cali.bin							u:object_r:vendor_persist_audio_file:s0
+# Audio
+/dev/socket/audio_hw_socket                     u:object_r:audio_socket:s0
+/dev/elliptic(.*)?                              u:object_r:sound_device:s0
+/mnt/vendor/persist/audio/cali_test.bin         u:object_r:vendor_persist_audio_file:s0
+/mnt/vendor/persist/audio/fsm_calib.bin         u:object_r:vendor_persist_audio_file:s0
+/mnt/vendor/persist/audio/aw_cali.bin           u:object_r:vendor_persist_audio_file:s0
 
 # Battery
-/vendor/bin/batterysecret								u:object_r:batterysecret_exec:s0
-/mnt/vendor/persist/subsys(/.*)?							u:object_r:persist_subsys_file:s0
+/vendor/bin/batterysecret                       u:object_r:batterysecret_exec:s0
+/mnt/vendor/persist/subsys(/.*)?                u:object_r:persist_subsys_file:s0
 
 # Bluetooth
-/vendor/bin/init\.mi\.btmac\.sh								u:object_r:vendor_qti_init_shell_exec:s0
+/vendor/bin/init\.mi\.btmac\.sh                 u:object_r:vendor_qti_init_shell_exec:s0
 
 # Camera
-/mnt/vendor/persist/camera(/.*)?							u:object_r:camera_persist_file:s0
+/mnt/vendor/persist/camera(/.*)?                u:object_r:camera_persist_file:s0
 
 # Hexagon DSP-side executable needed for Halide operation
 # This is labeled as public_adsprpcd_file as it needs to be read by apps
 # (e.g. Google Camera App)
-/mnt/vendor/dsp/fastrpc_shell_3                                         u:object_r:public_adsprpcd_file:s0
+/mnt/vendor/dsp/fastrpc_shell_3                 u:object_r:public_adsprpcd_file:s0
 
 # Fingerprint
-/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2.3-service\.xiaomi     u:object_r:hal_fingerprint_default_exec:s0
-/vendor/bin/hw/vendor\.silead\.hardware\.fingerprintext@1\.0-service     u:object_r:hal_fingerprint_default_exec:s0
-
-# Fingerprint devices
-/dev/goodix_fp										u:object_r:vendor_fingerprint_device:s0
-/dev/silead_fp										u:object_r:vendor_fingerprint_device:s0
-/dev/silead_s.*										u:object_r:vendor_fingerprint_device:s0
-/dev/silead_stub									u:object_r:vendor_fingerprint_device:s0
-/dev/spidev.*										u:object_r:vendor_fingerprint_device:s0
-
-# Fingerprint data
-/data/vendor/fpc(/.*)?									u:object_r:vendor_fingerprint_data_file:s0
-/data/vendor/fpdump(/.*)?								u:object_r:vendor_fingerprint_data_file:s0
-/data/vendor/goodix(/.*)?								u:object_r:vendor_fingerprint_data_file:s0
-/data/vendor/goodix/gf_data(/.*)?							u:object_r:vendor_fingerprint_data_file:s0
-/data/vendor/silead(/.*)?								u:object_r:vendor_fingerprint_data_file:s0
-/mnt/vendor/persist/silead(/.*)?							u:object_r:vendor_fingerprint_data_file:s0
-/mnt/vendor/persist/goodix(/.*)?							u:object_r:vendor_fingerprint_data_file:s0
+/dev/goodix_fp                                  u:object_r:vendor_fingerprint_device:s0
+/dev/silead_fp                                  u:object_r:vendor_fingerprint_device:s0
+/dev/silead_s.*                                 u:object_r:vendor_fingerprint_device:s0
+/dev/silead_stub                                u:object_r:vendor_fingerprint_device:s0
+/dev/spidev.*                                   u:object_r:vendor_fingerprint_device:s0
+/data/vendor/fpc(/.*)?                          u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/fpdump(/.*)?                       u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/goodix(/.*)?                       u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/goodix/gf_data(/.*)?               u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/silead(/.*)?                       u:object_r:vendor_fingerprint_data_file:s0
+/mnt/vendor/persist/silead(/.*)?                u:object_r:vendor_fingerprint_data_file:s0
+/mnt/vendor/persist/goodix(/.*)?                u:object_r:vendor_fingerprint_data_file:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2.3-service\.xiaomi   u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/vendor\.silead\.hardware\.fingerprintext@1\.0-service            u:object_r:hal_fingerprint_default_exec:s0
 
 # IR
-/dev/ir_spi										u:object_r:ir_spi_device:s0
+/dev/ir_spi                                     u:object_r:ir_spi_device:s0
 
 # Label read_ahead_kb in /data partition
-/sys/devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/read_ahead_kb u:object_r:vendor_sysfs_scsi_host:s0
+/sys/devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/read_ahead_kb         u:object_r:vendor_sysfs_scsi_host:s0
 
 # Label discard_max_bytes in /data partition
-/sys/devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/discard_max_bytes u:object_r:vendor_sysfs_scsi_host:s0
+/sys/devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/discard_max_bytes     u:object_r:vendor_sysfs_scsi_host:s0
 
 # Mlipay
-/vendor/bin/mlipayd@1.1									u:object_r:hal_mlipay_default_exec:s0
+/vendor/bin/mlipayd@1.1                         u:object_r:hal_mlipay_default_exec:s0
 
 # NFC
-/dev/pn553										u:object_r:nfc_device:s0
-/dev/pn54x										u:object_r:nfc_device:s0
+/dev/pn553                                      u:object_r:nfc_device:s0
+/dev/pn54x                                      u:object_r:nfc_device:s0
 
 # Sensors
-/vendor/bin/hw/android\.hardware\.sensors@2.1-service\.xiaomi_holi-multihal		u:object_r:hal_sensors_default_exec:s0
+/vendor/bin/hw/android\.hardware\.sensors@2.1-service\.xiaomi_holi-multihal     u:object_r:hal_sensors_default_exec:s0
 
 # Thermal
-/data/vendor/thermal(/.*)?								u:object_r:thermal_data_file:s0
-/vendor/bin/mi_thermald									u:object_r:mi_thermald_exec:s0
+/data/vendor/thermal(/.*)?                      u:object_r:thermal_data_file:s0
+/vendor/bin/mi_thermald                         u:object_r:mi_thermald_exec:s0
 
 # Vibrator
-/vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.xiaomi_holi			u:object_r:hal_vibrator_default_exec:s0
+/vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.xiaomi_holi            u:object_r:hal_vibrator_default_exec:s0
 
 # Xiaomi MAC
-/data/vendor/mac_addr(/.*)?								u:object_r:vendor_wifi_vendor_data_file:s0
-/data/vendor/wlan_logs(/.*)?								u:object_r:vendor_wifi_vendor_data_file:s0
+/data/vendor/mac_addr(/.*)?                     u:object_r:vendor_wifi_vendor_data_file:s0
+/data/vendor/wlan_logs(/.*)?                    u:object_r:vendor_wifi_vendor_data_file:s0

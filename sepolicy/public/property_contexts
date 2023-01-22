@@ -1,6 +1,5 @@
 # Camera
-camera.					u:object_r:vendor_camera_prop:s0
+camera.                     u:object_r:vendor_camera_prop:s0
 
 # Fingerprint
-sys.fp.vendor				u:object_r:vendor_fingerprint_prop:s0
-
+sys.fp.vendor               u:object_r:vendor_fingerprint_prop:s0
