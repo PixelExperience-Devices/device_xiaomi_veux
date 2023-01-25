@@ -17,5 +17,6 @@
 runtime_resource_overlay {
     name: "CarrierConfigOverlayVeux",
     sdk_version: "current",
+    aaptflags: ["--keep-raw-values"],
     product_specific: true
 }
