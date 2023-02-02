@@ -1,6 +1,3 @@
-# Camera
-vendor_internal_prop(vendor_camera_sensor_prop)
-
 # Fingerprint
 vendor_restricted_prop(vendor_fingerprint_prop)
 
