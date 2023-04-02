@@ -134,6 +134,7 @@ persist.vendor.audio.misound.disable=true
 persist.vendor.audio.delta.refresh=true
 
 # Audio volume steps
+ro.config.media_vol_steps=18
 ro.config.vc_call_vol_steps=11
 
 # Bluetooth
