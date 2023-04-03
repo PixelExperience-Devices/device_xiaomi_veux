@@ -813,10 +813,6 @@
          from DOZE to ON, in millis. -->
     <integer name="config_wakeUpDelayDoze">50</integer>
 
-    <!-- Default color temperature, in Kelvin, to tint the screen when Night display is
-         activated. -->
-    <integer name="config_nightDisplayColorTemperatureDefault">3850</integer> 
-
     <!-- Defines the actions shown in advanced reboot submenu -->
     <string-array name="config_restartActionsList">
         <item>restart</item>
