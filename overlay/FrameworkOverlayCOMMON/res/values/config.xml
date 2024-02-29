@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2024 The PixelExperience Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Build properties from a GMS certified device -->
+    <string-array name="config_certifiedBuildProperties" translatable="false">
+        <item>griffin_retcn</item> <!-- Build.PRODUCT -->
+        <item>griffin</item> <!-- Build.DEVICE -->
+        <item>motorola</item> <!-- Build.MANUFACTURER -->
+        <item>motorola</item> <!-- Build.BRAND -->
+        <item>XT1650-05</item> <!-- Build.MODEL -->
+        <item>motorola/griffin_retcn/griffin:6.0.1/MCC24.246-37/42:user/release-keys</item> <!-- Build.FINGERPRINT -->
+        <item>2016-07-01</item> <!-- Build.SECURITY_PATCH -->
+        <item>MCC24.246-37</item> <!-- Build.ID -->
+    </string-array>
+
+</resources>
