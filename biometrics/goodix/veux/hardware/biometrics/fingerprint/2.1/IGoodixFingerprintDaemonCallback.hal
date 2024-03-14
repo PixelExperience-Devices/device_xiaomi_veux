@@ -1,0 +1,23 @@
+/*
+ * Copyright (C) 2019-2020, 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.goodix.veux.hardware.biometrics.fingerprint@2.1;
+
+interface IGoodixFingerprintDaemonCallback {
+    oneway onEnrollResult(uint64_t devId, uint32_t fingerId, uint32_t groupId, uint32_t rem);
+
+    oneway onAcquired(uint64_t devId, uint32_t acquiredInfo);
+
+    oneway onAuthenticated(uint64_t devId, uint32_t fingerId, uint32_t groupId, vec<uint8_t> hat);
+
+    oneway onError(uint64_t devId, uint32_t error);
+
+    oneway onRemoved(uint64_t devId, uint32_t fingerId, uint32_t groupId);
+
+    oneway onTestCmd(uint64_t devId, uint32_t cmdId, vec<uint8_t> result);
+
+    oneway onDaemonMessage(uint64_t devId, uint32_t msgId, uint32_t cmdId, vec<uint8_t> msgData);
+};

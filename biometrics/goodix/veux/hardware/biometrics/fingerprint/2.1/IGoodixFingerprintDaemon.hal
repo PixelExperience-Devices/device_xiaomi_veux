@@ -1,0 +1,19 @@
+/*
+ * Copyright (C) 2019-2020, 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.goodix.veux.hardware.biometrics.fingerprint@2.1;
+
+import IGoodixFingerprintDaemonCallback;
+
+interface IGoodixFingerprintDaemon {
+    oneway initCallback(IGoodixFingerprintDaemonCallback callback);
+
+    oneway setNotify(IGoodixFingerprintDaemonCallback Callback);
+
+    testCmd(uint32_t cmdId, vec<uint8_t> param) generates (int32_t debugErrno);
+
+    sendCommand(uint32_t cmd, vec<uint8_t> data) generates (int32_t resultCode, vec<int8_t> data);
+};

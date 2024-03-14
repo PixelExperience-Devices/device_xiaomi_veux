@@ -4,8 +4,18 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
+hidl_package_root {
+    name: "com.fingerprints",
+    path: "device/xiaomi/veux/biometrics/fingerprints",
+}
+
+hidl_package_root {
+    name: "vendor.goodix",
+    path: "device/xiaomi/veux/biometrics/goodix",
+}
+
 cc_library_shared {
     name: "libvendor.goodix.hardware.biometrics.fingerprint@2.1",
-    shared_libs: ["vendor.goodix.hardware.biometrics.fingerprint@2.1"],
+    shared_libs: ["vendor.goodix.veux.hardware.biometrics.fingerprint@2.1"],
     vendor_available: true,
 }
