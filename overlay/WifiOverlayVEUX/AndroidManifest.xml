@@ -5,5 +5,7 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.wifi.resources.overlay.veux">
-    <overlay android:targetPackage="com.android.wifi.resources" />
+    <overlay
+        android:targetName="WifiCustomization"
+        android:targetPackage="com.android.wifi.resources" />
 </manifest>
